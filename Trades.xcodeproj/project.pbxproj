@@ -124,12 +124,11 @@
 		A067A5B51E777F68006059A4 /* Trades */ = {
 			isa = PBXGroup;
 			children = (
+				EF1AAB411E787709001772E9 /* Custom Controls */,
 				A067A5B61E777F68006059A4 /* AppDelegate.swift */,
 				A067A5B81E777F68006059A4 /* ViewController.swift */,
 				A067A5BA1E777F68006059A4 /* Main.storyboard */,
-				EF1AAB391E7866AE001772E9 /* LoginViewController.swift */,
-				EF1AAB3D1E78694A001772E9 /* CustomControls.swift */,
-				EF1AAB3B1E7866C9001772E9 /* RegisterViewController.swift */,
+				EF1AAB421E78771C001772E9 /* Login and Register */,
 				A067A5C01E777F68006059A4 /* Assets.xcassets */,
 				A067A5C21E777F68006059A4 /* LaunchScreen.storyboard */,
 				A067A5C51E777F68006059A4 /* Info.plist */,
@@ -178,6 +177,23 @@
 				FAEDFDFD7F2BEA7E96CA6B62 /* Pods-TradesUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF1AAB411E787709001772E9 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				EF1AAB3D1E78694A001772E9 /* CustomControls.swift */,
+			);
+			name = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		EF1AAB421E78771C001772E9 /* Login and Register */ = {
+			isa = PBXGroup;
+			children = (
+				EF1AAB391E7866AE001772E9 /* LoginViewController.swift */,
+				EF1AAB3B1E7866C9001772E9 /* RegisterViewController.swift */,
+			);
+			name = "Login and Register";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

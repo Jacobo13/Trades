@@ -12,6 +12,7 @@ import Firebase
 
 class RegisterViewController: UIViewController {
     
+    //declara textfields y label de error
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -30,23 +31,28 @@ class RegisterViewController: UIViewController {
     
     
     func post() {
+        //declaracion de variable que guarda id unica del usuario
         let userID = FIRAuth.auth()?.currentUser?.uid
+        //crear diccionario que contenga el nombre y correo para subir datos del usuario a firebase
         let post : [String : AnyObject] = ["Name" : name.text as AnyObject,
                                            "Email" : email.text as AnyObject]
+        //declarar referencia de la base de datos para saber a donde se va a subir la info
         let databaseRef = FIRDatabase.database().reference(withPath: "Users")
-        
+        //crear un post del diccionario anterior bajo el id del usuario
         databaseRef.child(userID!).childByAutoId().setValue(post)
     }
     
     @IBAction func CreateAccount(_ sender: Any) {
         FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text!, completion: {
             user, error in
+            //si existe un error imprime el error en errorLabel
             if error != nil{
                 if error!.localizedDescription == "An internal error has occurred, print and inspect the error details for more information." {
                     self.errorLabel.text = "Please enter password."
                 } else{
                     self.errorLabel.text = error!.localizedDescription
                 }
+            //si no hay error enviar a la pantalla de login
             }else {
                 self.errorLabel.isHidden = true
                 self.post()
