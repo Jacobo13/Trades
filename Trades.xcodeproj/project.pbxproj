@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9629F02FD906807EA6621336 /* Pods_Trades.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DD52461862414AA114B99A /* Pods_Trades.framework */; };
 		A067A5B71E777F68006059A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067A5B61E777F68006059A4 /* AppDelegate.swift */; };
-		A067A5B91E777F68006059A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067A5B81E777F68006059A4 /* ViewController.swift */; };
 		A067A5BC1E777F68006059A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A067A5BA1E777F68006059A4 /* Main.storyboard */; };
 		A067A5BF1E777F68006059A4 /* Trades.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A067A5BD1E777F68006059A4 /* Trades.xcdatamodeld */; };
 		A067A5C11E777F68006059A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A067A5C01E777F68006059A4 /* Assets.xcassets */; };
@@ -46,7 +45,6 @@
 		94420F2EFFF8FC2FFD1E85ED /* Pods_TradesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067A5B31E777F68006059A4 /* Trades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067A5B61E777F68006059A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A067A5B81E777F68006059A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A067A5BB1E777F68006059A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A067A5BE1E777F68006059A4 /* Trades.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trades.xcdatamodel; sourceTree = "<group>"; };
 		A067A5C01E777F68006059A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			children = (
 				EF1AAB411E787709001772E9 /* Custom Controls */,
 				A067A5B61E777F68006059A4 /* AppDelegate.swift */,
-				A067A5B81E777F68006059A4 /* ViewController.swift */,
 				A067A5BA1E777F68006059A4 /* Main.storyboard */,
 				EF1AAB421E78771C001772E9 /* Login and Register */,
 				A067A5C01E777F68006059A4 /* Assets.xcassets */,
@@ -483,7 +480,6 @@
 			files = (
 				EF1AAB3A1E7866AE001772E9 /* LoginViewController.swift in Sources */,
 				EF1AAB3C1E7866C9001772E9 /* RegisterViewController.swift in Sources */,
-				A067A5B91E777F68006059A4 /* ViewController.swift in Sources */,
 				A067A5B71E777F68006059A4 /* AppDelegate.swift in Sources */,
 				EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */,
 				A067A5BF1E777F68006059A4 /* Trades.xcdatamodeld in Sources */,
