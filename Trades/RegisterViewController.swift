@@ -5,6 +5,7 @@
 //  Created by Programación Daniel on 14/03/17.
 //  Copyright © 2017 Jacobo Sacal. All rights reserved.
 // hola me llamo jacobo 
+//aa
 
 import Foundation
 import UIKit
@@ -62,7 +63,7 @@ class RegisterViewController: UIViewController {
                     self.errorLabel.isHidden = true
                     self.post()
                     print("Take Me To Home Screen")
-                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
+                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BeginingView")
                     self.present(vc, animated: true, completion: nil)
                     //self.sendEmailVerificationWithCompletion
 

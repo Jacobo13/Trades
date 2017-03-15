@@ -48,8 +48,8 @@ class LoginViewController: UIViewController {
                 
                 print("take me to the home screen")
                 
-                /*let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostScreenViewController")
-                self.present(vc, animated: true, completion: nil)*/
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BeginingView")
+                self.present(vc, animated: true, completion: nil)
             }
         })
     }
