@@ -21,7 +21,7 @@
 		EF1AAB3A1E7866AE001772E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB391E7866AE001772E9 /* LoginViewController.swift */; };
 		EF1AAB3C1E7866C9001772E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB3B1E7866C9001772E9 /* RegisterViewController.swift */; };
 		EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB3D1E78694A001772E9 /* CustomControls.swift */; };
-		EF1AAB401E786FC9001772E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF1AAB3F1E786FC9001772E9 /* GoogleService-Info.plist */; };
+		EF1AAB441E78CF76001772E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		EF1AAB391E7866AE001772E9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EF1AAB3B1E7866C9001772E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EF1AAB3D1E78694A001772E9 /* CustomControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
-		EF1AAB3F1E786FC9001772E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAEDFDFD7F2BEA7E96CA6B62 /* Pods-TradesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradesUITests/Pods-TradesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trades.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trades/Pods-Trades.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,7 +132,7 @@
 				A067A5C01E777F68006059A4 /* Assets.xcassets */,
 				A067A5C21E777F68006059A4 /* LaunchScreen.storyboard */,
 				A067A5C51E777F68006059A4 /* Info.plist */,
-				EF1AAB3F1E786FC9001772E9 /* GoogleService-Info.plist */,
+				EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */,
 				A067A5BD1E777F68006059A4 /* Trades.xcdatamodeld */,
 			);
 			path = Trades;
@@ -316,8 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A067A5C41E777F68006059A4 /* LaunchScreen.storyboard in Resources */,
+				EF1AAB441E78CF76001772E9 /* GoogleService-Info.plist in Resources */,
 				A067A5C11E777F68006059A4 /* Assets.xcassets in Resources */,
-				EF1AAB401E786FC9001772E9 /* GoogleService-Info.plist in Resources */,
 				A067A5BC1E777F68006059A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
