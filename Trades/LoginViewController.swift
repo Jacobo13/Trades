@@ -11,7 +11,7 @@ import Firebase
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+
     //declara text fields
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -47,6 +47,8 @@ class LoginViewController: UIViewController {
             //si no hay error que te lleve a la pantalla de inicio
             } else{
                 
+                let usuari = UserService()
+                usuari.storeCredentials()
                 
                 print("take me to the home screen")
                 

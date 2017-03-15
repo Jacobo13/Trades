@@ -64,6 +64,10 @@ class RegisterViewController: UIViewController {
                     self.errorLabel.isHidden = true
                     self.post()
                     print("Take Me To Home Screen")
+                    
+                    let usuari = UserService()
+                    usuari.storeCredentials()
+                    
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BeginingView")
                     self.present(vc, animated: true, completion: nil)
                     //self.sendEmailVerificationWithCompletion
