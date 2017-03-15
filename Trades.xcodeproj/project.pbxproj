@@ -23,6 +23,7 @@
 		EF1AAB3C1E7866C9001772E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB3B1E7866C9001772E9 /* RegisterViewController.swift */; };
 		EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB3D1E78694A001772E9 /* CustomControls.swift */; };
 		EF1AAB441E78CF76001772E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */; };
+		EF7BE25B1E78EB3B00E9CE5C /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EF1AAB3B1E7866C9001772E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EF1AAB3D1E78694A001772E9 /* CustomControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
 		EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		FAEDFDFD7F2BEA7E96CA6B62 /* Pods-TradesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradesUITests/Pods-TradesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trades.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trades/Pods-Trades.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				EF1AAB411E787709001772E9 /* Custom Controls */,
 				A067A5B61E777F68006059A4 /* AppDelegate.swift */,
 				A067A5BA1E777F68006059A4 /* Main.storyboard */,
+				EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */,
 				EF1AAB421E78771C001772E9 /* Login and Register */,
 				A067A5C01E777F68006059A4 /* Assets.xcassets */,
 				A067A5C21E777F68006059A4 /* LaunchScreen.storyboard */,
@@ -502,6 +505,7 @@
 			files = (
 				EF1AAB3A1E7866AE001772E9 /* LoginViewController.swift in Sources */,
 				EF1AAB3C1E7866C9001772E9 /* RegisterViewController.swift in Sources */,
+				EF7BE25B1E78EB3B00E9CE5C /* AddViewController.swift in Sources */,
 				A067A5B71E777F68006059A4 /* AppDelegate.swift in Sources */,
 				EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */,
 				A067A5E91E78DFB8006059A4 /* UserServices.swift in Sources */,
