@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController {
         //declarar referencia de la base de datos para saber a donde se va a subir la info
         let databaseRef = FIRDatabase.database().reference(withPath: "Users")
         //crear un post del diccionario anterior bajo el id del usuario
-        databaseRef.child(userID!).childByAutoId().setValue(post)
+        databaseRef.child(userID!).setValue(post)
     }
     
     @IBAction func CreateAccount(_ sender: Any) {
@@ -48,18 +48,25 @@ class RegisterViewController: UIViewController {
             //si existe un error imprime el error en errorLabel
             if error != nil{
                 if error!.localizedDescription == "An internal error has occurred, print and inspect the error details for more information." {
-                    self.errorLabel.text = "Please enter password."
+                    self.errorLabel.text = "Please enter email."
+                    
                 } else{
                     self.errorLabel.text = error!.localizedDescription
                 }
+                
             //si no hay error enviar a la pantalla de login
             }else {
-                self.errorLabel.isHidden = true
-                self.post()
-                print("Take Me To Home Screen")
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
-                self.present(vc, animated: true, completion: nil)
-                //self.sendEmailVerificationWithCompletion
+                if self.name.text == nil {
+                    self.errorLabel.text = "Please enter name."
+                } else {
+                    self.errorLabel.isHidden = true
+                    self.post()
+                    print("Take Me To Home Screen")
+                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
+                    self.present(vc, animated: true, completion: nil)
+                    //self.sendEmailVerificationWithCompletion
+
+                }
             }
         })
         
