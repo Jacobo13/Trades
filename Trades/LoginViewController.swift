@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //esconder error hasta que exista
+        
+        addGestureToView()
         incorrectLabel.isHidden = true
     }
     

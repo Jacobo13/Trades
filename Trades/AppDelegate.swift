@@ -19,7 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
+        
+        let user = UserService()
+        if user.userIsLogged() {
+            self.goToMain()
+        }
+        
         return true
+    
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -89,6 +97,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    
+    func goToMain() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BeginingView")
+        window?.rootViewController = vc
     }
 
 }

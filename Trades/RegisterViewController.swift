@@ -23,6 +23,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        addGestureToView()
     }
     
     override func didReceiveMemoryWarning() {
