@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GHj-eY-iYt">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GHj-eY-iYt">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -357,15 +357,24 @@
                     <view key="view" contentMode="scaleToFill" id="gr2-X7-3gQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKn-s6-RUz">
+                                <rect key="frame" x="150" y="358" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" id="ddH-fE-gsR"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="Perfil" selectedImage="Perfil" id="ddH-fE-gsR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5P-9Q-z4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="2175"/>
+            <point key="canvasLocation" x="-13" y="2155"/>
         </scene>
-        <!--Add Image-->
+        <!--View Controller-->
         <scene sceneID="1Md-Bc-IXo">
             <objects>
                 <viewController id="hEo-ny-a9l" sceneMemberID="viewController">
@@ -376,9 +385,18 @@
                     <view key="view" contentMode="scaleToFill" id="Sm5-8L-B7h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSK-6m-Rzm">
+                                <rect key="frame" x="186" y="369" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Image" id="9Gi-8d-A8t"/>
+                    <tabBarItem key="tabBarItem" title="" image="+" selectedImage="+" id="9Gi-8d-A8t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODy-p1-IW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -395,13 +413,24 @@
                     <view key="view" contentMode="scaleToFill" id="LAH-cG-OsZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Newsfeed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj0-Ss-xZp">
+                                <rect key="frame" x="150" y="358" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News Feed" id="1qr-Qx-Ilk"/>
+                    <tabBarItem key="tabBarItem" title="News Feed" image="NewsFeed" selectedImage="NewsFeed" id="1qr-Qx-Ilk">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAE-NW-YqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="851"/>
+            <point key="canvasLocation" x="921.73913043478262" y="850.27173913043487"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aMK-nE-WR1">
@@ -423,4 +452,10 @@
             <point key="canvasLocation" x="-13" y="1180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="+" width="66" height="68"/>
+        <image name="NewsFeed" width="30" height="30"/>
+        <image name="Perfil" width="33" height="34"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>
