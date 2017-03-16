@@ -26,10 +26,10 @@ class UserService {
         return logged
     }
     
-//    class func endSession() {
-//        let appDomain = Bundle.main.bundleIdentifier!
-//        UserDefaults.standard.removePersistentDomain(forName: appDomain)
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as! ViewController
-//        UIApplication.shared.keyWindow?.rootViewController = vc
-//    }
+    class func endSession() {
+        let appDomain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: appDomain)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
+        UIApplication.shared.keyWindow?.rootViewController = vc
+    }
 }

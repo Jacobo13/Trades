@@ -9,6 +9,8 @@ target 'Trades' do
   pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+
 
   target 'TradesTests' do
     inherit! :search_paths
