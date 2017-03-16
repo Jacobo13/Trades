@@ -477,6 +477,7 @@
                     <tabBarItem key="tabBarItem" title="" image="+" selectedImage="+" id="9Gi-8d-A8t"/>
                     <connections>
                         <outlet property="name" destination="5Wl-KB-Tzr" id="CLm-x0-hnt"/>
+                        <outlet property="pickerView" destination="clh-R6-wYM" id="ePL-B0-k7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODy-p1-IW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
