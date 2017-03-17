@@ -20,7 +20,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var name: UITextField!
-    let imagePickerController = UIImagePickerController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -51,16 +51,17 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
-        
+        let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
-        imagePickerController.mediaTypes = [kCIAttributeTypeImage]
+        //imagePickerController.mediaTypes = [kCIAttributeTypeImage]
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
     
     
-    func uploadImageFirebase (data: NSData) {
-        let storageRef = FIRStorage.storage().reference(withPath: "Products")
+    func uploadImageFirebase (data: Data) {
+        let imageID = UUID().uuidString
+        let storageRef = FIRStorage.storage().reference().child(imageID)
         let uploadMetadata = FIRStorageMetadata()
         uploadMetadata.contentType = "image/jpeg"
         storageRef.put(data as Data, metadata: uploadMetadata) { (metadata, error) in
@@ -68,12 +69,22 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
                 //print (error?.localizedDescription!)
             }else {
                 print ("SUCESS here is some metadata \(metadata)")
+                storageRef.downloadURL(completion: { (url, error) in
+                    if error != nil {
+                        print (error?.localizedDescription)
+                    }else {
+                        print(url!)
+                    }
+                })
             }
         }
+        
         
     }
     
     @IBAction func save(_ sender: Any) {
+        let data = UIImagePNGRepresentation(photoImageView.image!)
+        uploadImageFirebase(data: data!)
         //uploadImageFirebase(data: imagePickerController. as NSData)
         //upload image to storage
         
