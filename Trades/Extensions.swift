@@ -27,7 +27,7 @@ extension AddViewController {
         // Disable the Save button if the text field is empty.
         let text = name.text ?? ""
         let text1 = descripcion.text ?? ""
-        saveButton.isEnabled = !text.isEmpty && !text1.isEmpty && descripcion.text != "Descripción" && photoImageView.image != nil
+        saveButton.isEnabled = !text.isEmpty && !text1.isEmpty && descripcion.text != "Descripción" && photoImageView.image != nil && categoriaSeleccionada != ""
     }
 
     
@@ -71,5 +71,6 @@ extension AddViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(listaDeCategorias[pickerView.selectedRow(inComponent: 0)])
         categoriaSeleccionada = listaDeCategorias[pickerView.selectedRow(inComponent: 0)]
+        nameTextFieldIsEmpty()
     }
 }

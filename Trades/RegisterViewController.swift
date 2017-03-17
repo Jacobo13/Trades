@@ -37,7 +37,8 @@ class RegisterViewController: UIViewController {
         let userID = FIRAuth.auth()?.currentUser?.uid
         //crear diccionario que contenga el nombre y correo para subir datos del usuario a firebase
         let post : [String : AnyObject] = ["Name" : name.text as AnyObject,
-                                           "Email" : email.text as AnyObject]
+                                           "Email" : email.text as AnyObject,
+                                           "Products" : "" as AnyObject]
         //declarar referencia de la base de datos para saber a donde se va a subir la info
         let databaseRef = FIRDatabase.database().reference(withPath: "Users")
         //crear un post del diccionario anterior bajo el id del usuario
