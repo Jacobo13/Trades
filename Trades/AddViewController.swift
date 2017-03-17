@@ -16,7 +16,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBOutlet weak var pickerView: UIPickerView!
     
     var listaDeCategorias = ["Arte", "Calzado", "Cocina", "Deportes", "Ejercicio", "Hogar", "Oficina", "Ropa", "Tecnologia", "Otros",]
-
+    var post : [String : AnyObject] = ["a" : "a" as AnyObject]
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var name: UITextField!
@@ -73,7 +73,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
                     if error != nil {
                         print (error?.localizedDescription)
                     }else {
-                        print(url!)
+                        self.funcionParaURL(URL: url!)
                     }
                 })
             }
@@ -85,10 +85,17 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBAction func save(_ sender: Any) {
         let data = UIImagePNGRepresentation(photoImageView.image!)
         uploadImageFirebase(data: data!)
-        //uploadImageFirebase(data: imagePickerController. as NSData)
-        //upload image to storage
+        //declarar referencia de la base de datos para saber a donde se va a subir la info
+        let databaseRef = FIRDatabase.database().reference(withPath: "Categorias/Deportes")
+        //crear un post del diccionario anterior bajo el id del usuario
+        databaseRef.child(name.text!).setValue(post)
         
     }
 
+    
+    func funcionParaURL (URL : URL) {
+        post = ["Image" : URL as AnyObject,
+                "Description" : "Vergalan" as AnyObject,]
+    }
 }
 
