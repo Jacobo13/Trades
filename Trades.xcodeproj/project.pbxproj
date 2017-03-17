@@ -75,8 +75,6 @@
 		EF1AAB3D1E78694A001772E9 /* CustomControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
 		EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		EFC8A8521E7BC55D00247FA2 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialPageViewController.swift; path = ../../trade/trade/TutorialPageViewController.swift; sourceTree = "<group>"; };
-		EFC8A8531E7BC55D00247FA2 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = ../../trade/trade/TutorialViewController.swift; sourceTree = "<group>"; };
 		FAEDFDFD7F2BEA7E96CA6B62 /* Pods-TradesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradesUITests/Pods-TradesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trades.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trades/Pods-Trades.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
