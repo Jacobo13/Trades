@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GHj-eY-iYt">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GHj-eY-iYt">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -186,7 +186,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puedes accesar con tu cuenta de Facebook" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sk-Qz-ths">
-                                        <rect key="frame" x="0.0" y="32" width="374" height="42"/>
+                                        <rect key="frame" x="0.0" y="32" width="333.66666666666669" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="a8i-ho-1QI"/>
                                         </constraints>
@@ -394,17 +394,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="flh-4x-ClH">
-                                <rect key="frame" x="107" y="438" width="200" height="200"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="L6R-a2-hQZ"/>
-                                    <constraint firstAttribute="height" constant="200" id="ltd-ml-vrW"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="LhT-lw-mec" appends="YES" id="1y2-OF-HWf"/>
-                                </connections>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oB0-77-QTC">
                                 <rect key="frame" x="30" y="646" width="354" height="30"/>
                                 <subviews>
@@ -457,25 +446,46 @@
                                     </textView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="XIT-Wl-9ei">
+                                <rect key="frame" x="107" y="438" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="tbC-LG-0hC"/>
+                                    <constraint firstAttribute="height" constant="200" id="wrk-ql-M4M"/>
+                                </constraints>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="FVb-1g-Ohj">
+                                <rect key="frame" x="107" y="438" width="200" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Alb-uv-wPD"/>
+                                    <constraint firstAttribute="height" constant="200" id="S1a-bj-BAQ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LhT-lw-mec" appends="YES" id="ZrF-FN-5VK"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="oB0-77-QTC" secondAttribute="trailing" constant="10" id="BJI-Pe-oo9"/>
                             <constraint firstItem="2ZU-wC-Fg4" firstAttribute="leading" secondItem="Sm5-8L-B7h" secondAttribute="leading" constant="10" id="Cnq-0f-Qun"/>
-                            <constraint firstItem="flh-4x-ClH" firstAttribute="top" secondItem="2ZU-wC-Fg4" secondAttribute="bottom" constant="8" id="ESI-9R-moA"/>
                             <constraint firstItem="tFX-tu-tx2" firstAttribute="top" secondItem="oB0-77-QTC" secondAttribute="bottom" constant="11" id="I4C-Gm-VB8"/>
-                            <constraint firstItem="flh-4x-ClH" firstAttribute="centerX" secondItem="Sm5-8L-B7h" secondAttribute="centerX" id="UPP-q3-GHq"/>
+                            <constraint firstItem="zxe-Yw-Q8m" firstAttribute="top" secondItem="FVb-1g-Ohj" secondAttribute="bottom" constant="8" id="Um9-gg-6VJ"/>
+                            <constraint firstItem="FVb-1g-Ohj" firstAttribute="top" secondItem="2ZU-wC-Fg4" secondAttribute="bottom" constant="8" id="YHM-a2-FTm"/>
                             <constraint firstAttribute="trailing" secondItem="2ZU-wC-Fg4" secondAttribute="trailing" constant="10" id="YUo-sJ-8fl"/>
                             <constraint firstItem="oB0-77-QTC" firstAttribute="leading" secondItem="Sm5-8L-B7h" secondAttribute="leadingMargin" constant="10" id="cHn-ZF-rrU"/>
                             <constraint firstItem="2ZU-wC-Fg4" firstAttribute="top" secondItem="o7P-TQ-g7y" secondAttribute="bottom" constant="10" id="fcQ-GX-3Jp"/>
-                            <constraint firstItem="oB0-77-QTC" firstAttribute="top" secondItem="flh-4x-ClH" secondAttribute="bottom" constant="8" id="ltJ-W3-w77"/>
+                            <constraint firstItem="XIT-Wl-9ei" firstAttribute="centerY" secondItem="FVb-1g-Ohj" secondAttribute="centerY" id="g6S-GC-Ast"/>
                             <constraint firstItem="oB0-77-QTC" firstAttribute="centerX" secondItem="Sm5-8L-B7h" secondAttribute="centerX" id="tyq-fs-7Z7"/>
+                            <constraint firstItem="XIT-Wl-9ei" firstAttribute="centerX" secondItem="Sm5-8L-B7h" secondAttribute="centerX" id="vf2-O9-2uv"/>
+                            <constraint firstItem="FVb-1g-Ohj" firstAttribute="centerX" secondItem="Sm5-8L-B7h" secondAttribute="centerX" id="xhq-Kq-teI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="+" selectedImage="+" id="9Gi-8d-A8t"/>
                     <connections>
+                        <outlet property="descripcion" destination="5XC-LZ-Yvy" id="fnN-4R-cH8"/>
                         <outlet property="name" destination="5Wl-KB-Tzr" id="CLm-x0-hnt"/>
-                        <outlet property="photoImageView" destination="flh-4x-ClH" id="mht-NH-h5e"/>
+                        <outlet property="photoImageView" destination="FVb-1g-Ohj" id="p9d-pT-Rn6"/>
                         <outlet property="pickerView" destination="clh-R6-wYM" id="ePL-B0-k7a"/>
                         <outlet property="saveButton" destination="zxe-Yw-Q8m" id="EuM-tI-ODw"/>
                     </connections>

@@ -26,17 +26,31 @@ extension AddViewController {
     func nameTextFieldIsEmpty() {
         // Disable the Save button if the text field is empty.
         let text = name.text ?? ""
-        saveButton.isEnabled = !text.isEmpty
+        let text1 = descripcion.text ?? ""
+        saveButton.isEnabled = !text.isEmpty && !text1.isEmpty && descripcion.text != "Descripción" && photoImageView.image != nil
     }
+
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         // Disable the Save button while editing.
+        saveButton.isEnabled = false
+    }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        // Disable the Save button while editing.
+        if textView.text == "Descripción" {
+            textView.text = ""
+        }
         saveButton.isEnabled = false
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         nameTextFieldIsEmpty()
     }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        nameTextFieldIsEmpty()
+    }
+    
 }
 
 

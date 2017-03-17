@@ -10,24 +10,29 @@ import Foundation
 import UIKit
 import Firebase
 
-class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
+    @IBOutlet weak var descripcion: UITextView!
     var categoriaSeleccionada = ""
     @IBOutlet weak var pickerView: UIPickerView!
+
     
     var listaDeCategorias = ["Arte", "Calzado", "Cocina", "Deportes", "Ejercicio", "Hogar", "Oficina", "Ropa", "Tecnologia", "Otros",]
-    var post : [String : AnyObject] = ["a" : "a" as AnyObject]
+    
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var name: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         addGestureToView()
         pickerView.delegate = self
         pickerView.dataSource = self
         name.delegate = self
+        descripcion.delegate = self
+        
         nameTextFieldIsEmpty()
     }
     
@@ -47,6 +52,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
         photoImageView.image = selectedPhoto
         dismiss(animated: true)
+        nameTextFieldIsEmpty()
     }
     
     
@@ -60,8 +66,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     
     
     func uploadImageFirebase (data: Data) {
-        let imageID = UUID().uuidString
-        let storageRef = FIRStorage.storage().reference().child(imageID)
+        let productID = UUID().uuidString
+        let storageRef = FIRStorage.storage().reference().child(productID)
         let uploadMetadata = FIRStorageMetadata()
         uploadMetadata.contentType = "image/jpeg"
         storageRef.put(data as Data, metadata: uploadMetadata) { (metadata, error) in
@@ -71,9 +77,9 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
                 print ("SUCESS here is some metadata \(metadata)")
                 storageRef.downloadURL(completion: { (url, error) in
                     if error != nil {
-                        print (error?.localizedDescription)
+                        print (error?.localizedDescription as Any)
                     }else {
-                        self.funcionParaURL(URL: url!)
+                        self.funcionParaURL(URL: url!, ID : productID)
                     }
                 })
             }
@@ -85,17 +91,21 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBAction func save(_ sender: Any) {
         let data = UIImagePNGRepresentation(photoImageView.image!)
         uploadImageFirebase(data: data!)
+        name.text = ""
+        descripcion.text = ""
+        photoImageView.image = nil
+    }
+    
+    
+    func funcionParaURL (URL : URL, ID : String) {
+        let post = ["Name" : name.text as AnyObject,
+                    "Description" : descripcion.text as AnyObject,
+                    "Image" : "\(URL)" as AnyObject]
+        
         //declarar referencia de la base de datos para saber a donde se va a subir la info
         let databaseRef = FIRDatabase.database().reference(withPath: "Categorias/Deportes")
         //crear un post del diccionario anterior bajo el id del usuario
-        databaseRef.child(name.text!).setValue(post)
-        
-    }
-
-    
-    func funcionParaURL (URL : URL) {
-        post = ["Image" : URL as AnyObject,
-                "Description" : "Vergalan" as AnyObject,]
+        databaseRef.child(ID).setValue(post)
     }
 }
 
