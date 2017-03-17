@@ -25,8 +25,10 @@
 		EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB3D1E78694A001772E9 /* CustomControls.swift */; };
 		EF1AAB441E78CF76001772E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */; };
 		EF7BE25B1E78EB3B00E9CE5C /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */; };
-		EFC8A8541E7BC55D00247FA2 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8A8521E7BC55D00247FA2 /* TutorialPageViewController.swift */; };
-		EFC8A8551E7BC55D00247FA2 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8A8531E7BC55D00247FA2 /* TutorialViewController.swift */; };
+		EF97E3DF1E7BDE7000EB4833 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97E3DD1E7BDE7000EB4833 /* TutorialPageViewController.swift */; };
+		EF97E3E01E7BDE7000EB4833 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97E3DE1E7BDE7000EB4833 /* TutorialViewController.swift */; };
+		EFC8A8541E7BC55D00247FA2 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		EFC8A8551E7BC55D00247FA2 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		EF1AAB3D1E78694A001772E9 /* CustomControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
 		EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		EF97E3DD1E7BDE7000EB4833 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		EF97E3DE1E7BDE7000EB4833 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		FAEDFDFD7F2BEA7E96CA6B62 /* Pods-TradesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradesUITests/Pods-TradesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trades.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trades/Pods-Trades.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,8 +231,8 @@
 		EFC8A8561E7BC57000247FA2 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				EFC8A8521E7BC55D00247FA2 /* TutorialPageViewController.swift */,
-				EFC8A8531E7BC55D00247FA2 /* TutorialViewController.swift */,
+				EF97E3DD1E7BDE7000EB4833 /* TutorialPageViewController.swift */,
+				EF97E3DE1E7BDE7000EB4833 /* TutorialViewController.swift */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -520,14 +524,16 @@
 			files = (
 				EF1AAB3A1E7866AE001772E9 /* LoginViewController.swift in Sources */,
 				EF1AAB3C1E7866C9001772E9 /* RegisterViewController.swift in Sources */,
+				EF97E3DF1E7BDE7000EB4833 /* TutorialPageViewController.swift in Sources */,
 				EF7BE25B1E78EB3B00E9CE5C /* AddViewController.swift in Sources */,
 				A067A5B71E777F68006059A4 /* AppDelegate.swift in Sources */,
 				EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */,
+				EF97E3E01E7BDE7000EB4833 /* TutorialViewController.swift in Sources */,
 				A067A5E91E78DFB8006059A4 /* UserServices.swift in Sources */,
-				EFC8A8541E7BC55D00247FA2 /* TutorialPageViewController.swift in Sources */,
+				EFC8A8541E7BC55D00247FA2 /* (null) in Sources */,
 				A067A5EE1E798B05006059A4 /* ProfileViewController.swift in Sources */,
 				A067A5BF1E777F68006059A4 /* Trades.xcdatamodeld in Sources */,
-				EFC8A8551E7BC55D00247FA2 /* TutorialViewController.swift in Sources */,
+				EFC8A8551E7BC55D00247FA2 /* (null) in Sources */,
 				A067A5EC1E78E158006059A4 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
