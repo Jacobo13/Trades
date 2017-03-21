@@ -52,7 +52,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTJ-8N-YvG">
-                                        <rect key="frame" x="38" y="20.5" width="103" height="30"/>
+                                        <rect key="frame" x="37.5" y="20.5" width="103" height="30"/>
                                         <state key="normal" title="Registrate aqui"/>
                                         <connections>
                                             <segue destination="axE-Mk-xsv" kind="show" id="JRt-2s-Ecc"/>
@@ -186,7 +186,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puedes accesar con tu cuenta de Facebook" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sk-Qz-ths">
-                                        <rect key="frame" x="0.0" y="32" width="333.5" height="42"/>
+                                        <rect key="frame" x="0.0" y="32" width="343" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="a8i-ho-1QI"/>
                                         </constraints>
@@ -409,14 +409,14 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="XIT-Wl-9ei">
-                                <rect key="frame" x="88" y="68" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="68" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="tbC-LG-0hC"/>
                                     <constraint firstAttribute="height" constant="200" id="wrk-ql-M4M"/>
                                 </constraints>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="FVb-1g-Ohj">
-                                <rect key="frame" x="88" y="68" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="68" width="200" height="200"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Alb-uv-wPD"/>
@@ -469,7 +469,7 @@
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Vuq-di-NUy">
-                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="UdY-ae-tP7"/>
                                     <constraint firstAttribute="width" constant="100" id="lEe-o0-6vo"/>
@@ -521,7 +521,7 @@
         <!--News Feed-->
         <scene sceneID="icH-Wf-htG">
             <objects>
-                <viewController id="iUI-eH-HJ2" sceneMemberID="viewController">
+                <viewController id="iUI-eH-HJ2" customClass="CategoriesViewController" customModule="Trades" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k9J-6u-iz3"/>
                         <viewControllerLayoutGuide type="bottom" id="Dm1-IH-3cS"/>
@@ -530,8 +530,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Newsfeed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj0-Ss-xZp">
-                                <rect key="frame" x="150" y="358" width="115" height="21"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="klE-on-k7E">
+                                <rect key="frame" x="16" y="90" width="343" height="518"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="UM7-G0-G5G">
+                                    <size key="itemSize" width="90" height="118"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Bb4-H6-9M5" customClass="WelcomeCollectionViewCell" customModule="Trades" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="10" width="90" height="118"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurante" translatesAutoresizingMaskIntoConstraints="NO" id="Kk1-t2-jZL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9Z-Mt-gAd">
+                                                    <rect key="frame" x="45" y="88" width="0.0" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="cUe-oL-o8e"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Kk1-t2-jZL" firstAttribute="leading" secondItem="Bb4-H6-9M5" secondAttribute="leadingMargin" constant="-8" id="2uy-5O-14o"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Kk1-t2-jZL" secondAttribute="trailing" constant="-8" id="3lr-LD-7cB"/>
+                                            <constraint firstItem="Kk1-t2-jZL" firstAttribute="top" secondItem="Bb4-H6-9M5" secondAttribute="topMargin" constant="-8" id="4au-Rk-lej"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="m9Z-Mt-gAd" secondAttribute="bottom" constant="-8" id="CAY-6d-FC4"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Kk1-t2-jZL" secondAttribute="bottom" constant="20" id="fTc-Ql-qs2"/>
+                                            <constraint firstItem="m9Z-Mt-gAd" firstAttribute="centerX" secondItem="Bb4-H6-9M5" secondAttribute="centerX" id="xtn-bx-HAl"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="m9Z-Mt-gAd" id="Iyk-eO-ogb"/>
+                                            <outlet property="imagen" destination="Kk1-t2-jZL" id="lhu-nD-Azc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sr-YZ-yFI">
+                                <rect key="frame" x="119" y="28" width="137" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="d6C-I4-QZC"/>
+                                    <constraint firstAttribute="width" constant="137" id="xiz-pZ-BhX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="klE-on-k7E" firstAttribute="top" secondItem="4Sr-YZ-yFI" secondAttribute="bottom" constant="41" id="MFp-xY-RVO"/>
+                            <constraint firstItem="klE-on-k7E" firstAttribute="leading" secondItem="LAH-cG-OsZ" secondAttribute="leadingMargin" id="NIR-PK-jUo"/>
+                            <constraint firstItem="klE-on-k7E" firstAttribute="trailing" secondItem="LAH-cG-OsZ" secondAttribute="trailingMargin" id="cmf-j0-c0i"/>
+                            <constraint firstItem="4Sr-YZ-yFI" firstAttribute="centerX" secondItem="LAH-cG-OsZ" secondAttribute="centerX" id="hdC-2c-EEj"/>
+                            <constraint firstItem="Dm1-IH-3cS" firstAttribute="top" secondItem="klE-on-k7E" secondAttribute="bottom" constant="10" id="q66-cv-jnK"/>
+                            <constraint firstItem="4Sr-YZ-yFI" firstAttribute="top" secondItem="k9J-6u-iz3" secondAttribute="bottom" constant="8" id="rrV-3T-ZFM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News Feed" image="NewsFeed" selectedImage="NewsFeed" id="1qr-Qx-Ilk">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="collectionView" destination="klE-on-k7E" id="xGz-kd-wzN"/>
+                        <segue destination="22I-Vd-TYU" kind="show" identifier="menuToMap" id="br5-sR-rv6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAE-NW-YqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919.20000000000005" y="848.72563718140941"/>
+        </scene>
+        <!--News Feed View Controller-->
+        <scene sceneID="iMU-ee-YUS">
+            <objects>
+                <viewController id="22I-Vd-TYU" customClass="NewsFeedViewController" customModule="Trades" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b2I-JG-4ab"/>
+                        <viewControllerLayoutGuide type="bottom" id="aag-hX-FIB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vjF-Rr-hog">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGX-am-P6j">
+                                <rect key="frame" x="144" y="323" width="86" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -540,13 +631,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News Feed" image="NewsFeed" selectedImage="NewsFeed" id="1qr-Qx-Ilk">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                    </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GAE-NW-YqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kl4-sr-Iyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921.73913043478262" y="850.27173913043487"/>
+            <point key="canvasLocation" x="1616.8" y="848.72563718140941"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aMK-nE-WR1">
@@ -959,6 +1047,7 @@
         <image name="NewsFeed" width="22" height="22"/>
         <image name="Perfil" width="25" height="25"/>
         <image name="defaultPhoto" width="540" height="540"/>
+        <image name="restaurante" width="480" height="360"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>

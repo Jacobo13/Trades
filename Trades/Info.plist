@@ -33,6 +33,8 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Trades needs your photos to add them to your app. They will remain private.</string>
+	<string>Trades would like to access your photos to show users details about your product. This photos will be public.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Trades would like to access your current location to show you products near you.</string>
 </dict>
 </plist>
