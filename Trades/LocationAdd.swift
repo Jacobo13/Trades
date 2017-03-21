@@ -1,5 +1,5 @@
 //
-//  LocationTest.swift
+//  LocationAdd.swift
 //  Trades
 //
 //  Created by Programación Daniel on 20/03/17.
@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import Foundation
 import CoreLocation
 import UIKit
 import MapKit
 
-extension CategoriesViewController {
+extension AddViewController {
     
-    func configureLocation() {
+    func configureLocationAdd() {
         // correla en view did load
         self.locationManager.requestAlwaysAuthorization()
         
@@ -25,14 +26,5 @@ extension CategoriesViewController {
             locationManager.startUpdatingLocation()
         }
         
-    }
-    
-    func returnDistance(from : CLLocationCoordinate2D, to : CLLocationCoordinate2D, mapView : MKMapView) -> Double {
-        let fromPoint = CLLocation(latitude: from.latitude, longitude: from.longitude)
-        let toPoint = CLLocation(latitude: to.latitude, longitude: to.longitude)
-        
-        let result = toPoint.distance(from: fromPoint)
-        
-        return result
     }
 }

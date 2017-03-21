@@ -27,10 +27,11 @@
 		EF7BE25B1E78EB3B00E9CE5C /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */; };
 		EF97E3DF1E7BDE7000EB4833 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97E3DD1E7BDE7000EB4833 /* TutorialPageViewController.swift */; };
 		EF97E3E01E7BDE7000EB4833 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97E3DE1E7BDE7000EB4833 /* TutorialViewController.swift */; };
-		EFA1AACC1E80403800982BFB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AACB1E80403800982BFB /* Location.swift */; };
+		EFA1AACC1E80403800982BFB /* LocationCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AACB1E80403800982BFB /* LocationCategories.swift */; };
 		EFA1AACE1E80A0F900982BFB /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AACD1E80A0F900982BFB /* CategoriesViewController.swift */; };
 		EFA1AAD01E80ABED00982BFB /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AACF1E80ABED00982BFB /* CategoriesCollectionViewCell.swift */; };
 		EFA1AAD21E80AF8500982BFB /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AAD11E80AF8500982BFB /* NewsFeedViewController.swift */; };
+		EFA1AAD41E80BAAC00982BFB /* LocationAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AAD31E80BAAC00982BFB /* LocationAdd.swift */; };
 		EFC8A8541E7BC55D00247FA2 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		EFC8A8551E7BC55D00247FA2 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
@@ -83,10 +84,11 @@
 		EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		EF97E3DD1E7BDE7000EB4833 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		EF97E3DE1E7BDE7000EB4833 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		EFA1AACB1E80403800982BFB /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		EFA1AACB1E80403800982BFB /* LocationCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCategories.swift; sourceTree = "<group>"; };
 		EFA1AACD1E80A0F900982BFB /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		EFA1AACF1E80ABED00982BFB /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFA1AAD11E80AF8500982BFB /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		EFA1AAD31E80BAAC00982BFB /* LocationAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAdd.swift; sourceTree = "<group>"; };
 		FAEDFDFD7F2BEA7E96CA6B62 /* Pods-TradesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradesUITests/Pods-TradesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trades.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trades/Pods-Trades.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,7 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				A067A5E81E78DFB8006059A4 /* UserServices.swift */,
-				EFA1AACB1E80403800982BFB /* Location.swift */,
+				EFA1AACB1E80403800982BFB /* LocationCategories.swift */,
+				EFA1AAD31E80BAAC00982BFB /* LocationAdd.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 			files = (
 				EF1AAB3A1E7866AE001772E9 /* LoginViewController.swift in Sources */,
 				EF1AAB3C1E7866C9001772E9 /* RegisterViewController.swift in Sources */,
+				EFA1AAD41E80BAAC00982BFB /* LocationAdd.swift in Sources */,
 				EFA1AAD01E80ABED00982BFB /* CategoriesCollectionViewCell.swift in Sources */,
 				EFA1AAD21E80AF8500982BFB /* NewsFeedViewController.swift in Sources */,
 				EF97E3DF1E7BDE7000EB4833 /* TutorialPageViewController.swift in Sources */,
@@ -548,7 +552,7 @@
 				A067A5EE1E798B05006059A4 /* ProfileViewController.swift in Sources */,
 				A067A5BF1E777F68006059A4 /* Trades.xcdatamodeld in Sources */,
 				EFC8A8551E7BC55D00247FA2 /* (null) in Sources */,
-				EFA1AACC1E80403800982BFB /* Location.swift in Sources */,
+				EFA1AACC1E80403800982BFB /* LocationCategories.swift in Sources */,
 				A067A5EC1E78E158006059A4 /* Extensions.swift in Sources */,
 				EFA1AACE1E80A0F900982BFB /* CategoriesViewController.swift in Sources */,
 			);

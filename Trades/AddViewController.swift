@@ -9,8 +9,13 @@
 import Foundation
 import UIKit
 import Firebase
+import CoreLocation
 
-class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, CLLocationManagerDelegate {
+    
+    var locationManager = CLLocationManager()
+    var currentLocation : CLLocationCoordinate2D!
+    
     
     @IBOutlet weak var descripcion: UITextView!
     var categoriaSeleccionada = ""
@@ -38,6 +43,9 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         descripcion.delegate = self
         
         nameTextFieldIsEmpty()
+        
+        configureLocationAdd()
+        currentLocation = self.locationManager.location?.coordinate
     }
     
     override func didReceiveMemoryWarning() {
@@ -105,10 +113,12 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     
     func funcionParaURL (URL : URL, ID : String) {
         let userID = FIRAuth.auth()?.currentUser?.uid
-        let post = ["UserID" : userID as AnyObject,
-                    "Name" : name.text as AnyObject,
-                    "Description" : descripcion.text as AnyObject,
-                    "Image" : "\(URL)" as AnyObject]
+        let post = ["UserID"      : userID                    as AnyObject,
+                    "Name"        : name.text                 as AnyObject,
+                    "Description" : descripcion.text          as AnyObject,
+                    "Image"       : "\(URL)"                  as AnyObject,
+                    "Latitude"    : currentLocation.latitude  as AnyObject,
+                    "Longitude"   : currentLocation.longitude as AnyObject]
         
         //declarar referencia de la base de datos para saber a donde se va a subir la info
         let databaseRef = FIRDatabase.database().reference(withPath: "Categorias/\(categoriaSeleccionada)")

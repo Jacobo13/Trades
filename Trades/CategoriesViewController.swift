@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import CoreLocation
+import Firebase
+import FirebaseDatabase
 
 class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     
@@ -46,11 +48,32 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var objetos : [NSDictionary] = []
+        let databaseRef = FIRDatabase.database().reference()
+        databaseRef.child("Categorias/\(categoria)").queryOrderedByKey().observe(.value, with: {snapshot in
+            let value = snapshot.value as? NSDictionary
+            
+            
+            /*let distance = self.returnDistance(from: self.currentLocation, toLatitude: value!["Latitude"] as! Double, toLongitude: value!["Longitude"] as! Double)
+             
+            if distance <= 50000 {
+                objetos.append(value!)
+                print(objetos)
+            }*/
+            
+            
+            let distance = self.returnDistance(from: self.currentLocation, toLatitude: 19.4068514, toLongitude: -99.2795076)
+            
+            if distance <= 50000 {
+                //objetos.append(value!)
+                print(objetos)
+            }
+            
+            print("\(distance) metros")
+        })
         let vc = segue.destination as! NewsFeedViewController
         vc.locationManager = self.locationManager
         vc.categoria = self.categoria
-        //enviar current location
-        vc.currentLocation = self.currentLocation
     }
     
     
