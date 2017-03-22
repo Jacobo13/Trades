@@ -73,14 +73,47 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
         
         /*var objetos : [NSDictionary] = []
         let databaseRef = FIRDatabase.database().reference()
-        databaseRef.child("Categorias/\(categoria)").queryOrderedByKey().observe(.value, with: {snapshot in
-            let value = snapshot.value as? NSDictionary
+        databaseRef.child("Categorias/\(categoria!)").observeSingleEvent(of: .value, with: { (snapshot) in
+            print("\(snapshot.childrenCount)")
+            for rest in snapshot.children.allObjects as! [FIRDataSnapshot] {
+                
+                let value = rest.value as? NSDictionary
+                let distance = self.returnDistance(from: self.currentLocation, toLatitude: value?["Latitude"] as! Double, toLongitude: value?["Longitude"] as! Double)
+                print(distance)
+                if distance <= 30000 {
+                    let dic = ["UserID"      : value?["UserID"]         as AnyObject,
+                               "Name"        : value?["Name"]           as AnyObject,
+                               "Description" : value?["Description"]    as AnyObject,
+                               "Image"       : value?["Image"]          as AnyObject,
+                               "Latitude"    : value?["Latitude"]       as AnyObject,
+                               "Longitude"   : value?["Longitude"]      as AnyObject]
+                    objetos.append(dic as NSDictionary)
+                    print(value?["Description"] as! String)
+                }
+            }
+        print(objetos)
+        })
+        
+            /*let value = snapshot.value as? NSDictionary
+            print((value?.))
+            for x in value! {
+                print(value![x])
+            }
+            if value?["Longitude"] != nil {
+                print((value?["Longitude"])!)
+                let distance = self.returnDistance(from: self.currentLocation, toLatitude: value!["Latitude"] as! Double, toLongitude: value!["Longitude"] as! Double)
+                 
+                if distance <= 50000 {
+                    //objetos.append(value!)
+                    print(objetos)
+                }
+                print("\(distance) metros")
+            }
+            print("a")*/
+            /*let distance = self.returnDistance(from: self.currentLocation, toLatitude: 19.4068514, toLongitude: -99.2795076)
             
-            
-            /*let distance = self.returnDistance(from: self.currentLocation, toLatitude: value!["Latitude"] as! Double, toLongitude: value!["Longitude"] as! Double)
-             
             if distance <= 50000 {
-                objetos.append(value!)
+                //objetos.append(value!)
                 print(objetos)
             }*/
             
