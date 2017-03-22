@@ -37,10 +37,11 @@ extension AddViewController {
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
         // Disable the Save button while editing.
+        saveButton.isEnabled = false
         if textView.text == "Descripción" {
             textView.text = ""
         }
-        saveButton.isEnabled = false
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

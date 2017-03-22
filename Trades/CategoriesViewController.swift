@@ -12,6 +12,15 @@ import CoreLocation
 import Firebase
 import FirebaseDatabase
 
+
+struct postsStruct {
+    let description : String!
+    let latitude : String!
+    let longitud : String!
+    let name : String!
+    let userID : String!
+}
+
 class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
@@ -33,6 +42,7 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
         collectionView.dataSource = self
         configureLocation()
         currentLocation = self.locationManager.location?.coordinate
+
         
         // Do any additional setup after loading the view.
     }
@@ -48,7 +58,20 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var objetos : [NSDictionary] = []
+        
+//        let conditionRef = FIRDatabase.database().reference().child("Categorias").child("Arte").child("35A31B2B-A4C9-41B7-BC7B-FBC3EBD872DE").child("Description")
+//        conditionRef.observe(.value) { (snap: FIRDataSnapshot) in
+//            print((snap.value as AnyObject).description)
+//        }
+        
+        
+        let conditionRef = FIRDatabase.database().reference().child("Categorias").child("\(categoria)").child("35A31B2B-A4C9-41B7-BC7B-FBC3EBD872DE").child("Description")
+        conditionRef.observe(.value) { (snap: FIRDataSnapshot) in
+            print((snap.value as AnyObject).description)
+        }
+        
+        
+        /*var objetos : [NSDictionary] = []
         let databaseRef = FIRDatabase.database().reference()
         databaseRef.child("Categorias/\(categoria)").queryOrderedByKey().observe(.value, with: {snapshot in
             let value = snapshot.value as? NSDictionary
@@ -70,7 +93,11 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
             }
             
             print("\(distance) metros")
-        })
+        })*/
+        
+        
+        
+        
         let vc = segue.destination as! NewsFeedViewController
         vc.locationManager = self.locationManager
         vc.categoria = self.categoria
