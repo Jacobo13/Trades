@@ -28,10 +28,7 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     var objetos : [NSDictionary] = []
     
     var categoria : String!
-    let categorias = ["Arte", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnología"]
-    
-    
-    let imagenes = ["Arte", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnología"]
+    let categorias = ["Arte", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnologia", "Arte", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnologia"]
     
     
     
@@ -59,13 +56,14 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        objetos = []
         let databaseRef = FIRDatabase.database().reference()
         databaseRef.child("Categorias/\(categoria!)").observeSingleEvent(of: .value, with: { (snapshot) in
             print("\(snapshot.childrenCount)")
             for rest in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 
                 let value = rest.value as? NSDictionary
+                print(value!)
                 let distance = self.returnDistance(from: self.currentLocation, toLatitude: value?["Latitude"] as! Double, toLongitude: value?["Longitude"] as! Double)
                 print(distance)
                 if distance <= 30000 {
@@ -105,8 +103,7 @@ extension CategoriesViewController : UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CategoriesCollectionViewCell
-        cell.imagen.image = UIImage(named: imagenes[indexPath.item])
-        cell.categoryLabel.text = categorias[indexPath.item]
+        cell.imagen.image = UIImage(named: categorias[indexPath.item])
         return cell
     }
     

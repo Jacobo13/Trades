@@ -16,11 +16,17 @@ class NewsFeedViewController : UIViewController {
     var categoria : String!
     var currentLocation : CLLocationCoordinate2D!
     var objetos : [NSDictionary] = []
-    
+    var infoUsuario : [NSDictionary] = []
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var obscuro: UIImageView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loading.startAnimating()
+        self.view.isUserInteractionEnabled = false
+        obscuro.isHidden = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
@@ -35,6 +41,9 @@ class NewsFeedViewController : UIViewController {
     func getInfo (notification : Notification) {
         self.objetos = notification.userInfo? ["objects"] as! [NSDictionary]
         tableView.reloadData()
+        loading.stopAnimating()
+        self.view.isUserInteractionEnabled = true
+        obscuro.isHidden = true
     }
     
 }
@@ -61,10 +70,21 @@ extension NewsFeedViewController : UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let numeroDeCell = indexPath.row
-        print(numeroDeCell)
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        infoUsuario = [objetos[indexPath.row]]
+        loading.startAnimating()
+        self.view.isUserInteractionEnabled = false
+        obscuro.isHidden = false
+
         performSegue(withIdentifier: "llevame", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ProductPage
+        vc.infoUsuario = self.infoUsuario
+        loading.stopAnimating()
+        self.view.isUserInteractionEnabled = true
+        obscuro.isHidden = true
+
     }
 }
