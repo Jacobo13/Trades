@@ -64,8 +64,7 @@ extension NewsFeedViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let numeroDeCell = indexPath.row
         print(numeroDeCell)
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductPage") as! ProductPage
-        vc.numeroDeCell = numeroDeCell
+        
         performSegue(withIdentifier: "llevame", sender: nil)
     }
 }
