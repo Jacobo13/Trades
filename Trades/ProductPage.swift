@@ -70,7 +70,7 @@ class ProductPage : UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! Propuesta
-        vc.userID = self.infoUsuario[0]["UserID"] as! String
+        vc.traderUserID = self.infoUsuario[0]["UserID"] as! String
     }
     
 }

@@ -35,6 +35,7 @@
 		EFA1AAD01E80ABED00982BFB /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AACF1E80ABED00982BFB /* CategoriesCollectionViewCell.swift */; };
 		EFA1AAD21E80AF8500982BFB /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AAD11E80AF8500982BFB /* NewsFeedViewController.swift */; };
 		EFA1AAD41E80BAAC00982BFB /* LocationAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AAD31E80BAAC00982BFB /* LocationAdd.swift */; };
+		EFA4EE041E84292F004A01DB /* PropuestaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4EE031E84292F004A01DB /* PropuestaCell.swift */; };
 		EFC8A8541E7BC55D00247FA2 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		EFC8A8551E7BC55D00247FA2 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		EFA1AACF1E80ABED00982BFB /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFA1AAD11E80AF8500982BFB /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		EFA1AAD31E80BAAC00982BFB /* LocationAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAdd.swift; sourceTree = "<group>"; };
+		EFA4EE031E84292F004A01DB /* PropuestaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropuestaCell.swift; sourceTree = "<group>"; };
 		FAEDFDFD7F2BEA7E96CA6B62 /* Pods-TradesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradesUITests/Pods-TradesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trades.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trades/Pods-Trades.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +249,7 @@
 				A003359E1E836CE200CA0B07 /* NewsFeedViewControllerCell.swift */,
 				A00335A01E837ED000CA0B07 /* ProductPage.swift */,
 				A07AF3911E841D7B001B6523 /* Propuesta.swift */,
+				EFA4EE031E84292F004A01DB /* PropuestaCell.swift */,
 				EFC8A8561E7BC57000247FA2 /* Tutorial */,
 			);
 			name = ViewControllers;
@@ -547,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1AAB3A1E7866AE001772E9 /* LoginViewController.swift in Sources */,
+				EFA4EE041E84292F004A01DB /* PropuestaCell.swift in Sources */,
 				EF1AAB3C1E7866C9001772E9 /* RegisterViewController.swift in Sources */,
 				EFA1AAD41E80BAAC00982BFB /* LocationAdd.swift in Sources */,
 				EFA1AAD01E80ABED00982BFB /* CategoriesCollectionViewCell.swift in Sources */,

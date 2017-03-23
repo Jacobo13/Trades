@@ -23,7 +23,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     @IBOutlet weak var loading: UIActivityIndicatorView!
 
     
-    var listaDeCategorias = ["", "Arte", "Calzado", "Cocina", "Deportes", "Ejercicio", "Hogar", "Oficina", "Ropa", "Tecnologia", "Otros",]
+    var listaDeCategorias = ["", "Arte", "Calzado", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnologia", "Otros",]
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
