@@ -26,6 +26,11 @@ class Propuesta : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TradersCollectionView.delegate = self
+        TradersCollectionView.dataSource = self
+        yourCollectionView.delegate = self
+        yourCollectionView.dataSource = self
+
         traderProducts = []
         traderList = []
         let databaseRef = FIRDatabase.database().reference()
@@ -65,23 +70,43 @@ class Propuesta : UIViewController {
 }
 
 
-//extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
+extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
 
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return categorias.count
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CategoriesCollectionViewCell
-//        cell.imagen.image = UIImage(named: categorias[indexPath.item])
-//        return cell
-//    }
-//    
-//    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        self.categoria = categorias[indexPath.item]
-//        //Hacemos la llamada al servicio segun la elección del usuario
-//        performSegue(withIdentifier: "menuToMap", sender: nil)
-//    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView.tag == 1 {
+            return traderProducts.count
+        } else {
+            return yourProducts.count
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PropuestaCell
+        print(collectionView.tag)
+        if collectionView.tag == 0 {
+            cell.name.text = yourProducts[indexPath.row]["Name"] as? String
+            let url = URL(string: "\(yourProducts[indexPath.row]["Image"])" )
+            let data = NSData(contentsOf: url!)
+            cell.imagen.image = UIImage(data: data as! Data)
+        } else {
+            cell.name.text = traderProducts[indexPath.row]["Name"] as? String
+            let url = URL(string: "\(traderProducts[indexPath.row]["Image"])" )
+            let data = NSData(contentsOf: url!)
+            cell.imagen.image = UIImage(data: data as! Data)
+        }
+        
+        
+        return cell
+    }
     
-//}
+    
+
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PropuestaCell
+        cell.backgroundColor = UIColor.green
+        //Hacemos la llamada al servicio segun la elección del usuario
+        performSegue(withIdentifier: "menuToMap", sender: nil)
+    }
+    
+}

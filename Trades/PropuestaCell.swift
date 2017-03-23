@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class PropuestaCell: UICollectionViewCell {
+    @IBOutlet weak var imagen: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    
+}

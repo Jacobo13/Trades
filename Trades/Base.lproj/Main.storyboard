@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rgu-NN-42X">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rgu-NN-42X">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -865,32 +865,31 @@
                                     <constraint firstAttribute="height" constant="175" id="VSR-9U-aDW"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e68-dy-ZF2">
-                                    <size key="itemSize" width="130" height="160"/>
+                                    <size key="itemSize" width="100" height="122"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" reuseIdentifier="TraderCell" id="6zh-ir-fZB">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="160"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" reuseIdentifier="Cell" id="6zh-ir-fZB" customClass="PropuestaCell" customModule="Trades" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-1g-v7c">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwY-Du-DWz">
-                                                    <rect key="frame" x="0.0" y="131" width="130" height="29"/>
+                                                    <rect key="frame" x="0.0" y="93" width="100" height="29"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="130" id="Nqs-KW-nIZ"/>
                                                         <constraint firstAttribute="height" constant="29" id="bSe-FP-MJz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-1g-v7c">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="92"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -902,10 +901,18 @@
                                             <constraint firstItem="IwY-Du-DWz" firstAttribute="top" secondItem="S9v-1g-v7c" secondAttribute="bottom" constant="1" id="zM3-I8-jt6"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="IwY-Du-DWz" secondAttribute="trailing" constant="-8" id="zRb-xE-IWd"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imagen" destination="S9v-1g-v7c" id="jFy-sE-lnD"/>
+                                            <outlet property="name" destination="IwY-Du-DWz" id="iyL-IQ-rqZ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="eZn-8T-DcJ" id="P83-40-Dcz"/>
+                                    <outlet property="delegate" destination="eZn-8T-DcJ" id="M7E-9D-1Z7"/>
+                                </connections>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jnv-5m-FSs">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jnv-5m-FSs">
                                 <rect key="frame" x="18" y="126" width="340" height="175"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -913,23 +920,22 @@
                                     <constraint firstAttribute="height" constant="175" id="iG8-p6-5WK"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3tf-wU-jIb">
-                                    <size key="itemSize" width="130" height="160"/>
+                                    <size key="itemSize" width="100" height="122"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" reuseIdentifier="TraderCell" id="waN-I9-1wR">
-                                        <rect key="frame" x="0.0" y="8" width="130" height="160"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="top" reuseIdentifier="Cell" id="waN-I9-1wR" customClass="PropuestaCell" customModule="Trades" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="27" width="100" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki9-Gd-0tL">
-                                                    <rect key="frame" x="0.0" y="131" width="130" height="29"/>
+                                                    <rect key="frame" x="0.0" y="93" width="100" height="29"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="130" id="5G7-fO-gw1"/>
                                                         <constraint firstAttribute="height" constant="29" id="UsK-mc-Qt0"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -937,7 +943,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="of1-mb-YXH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="92"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -950,8 +956,16 @@
                                             <constraint firstItem="of1-mb-YXH" firstAttribute="leading" secondItem="waN-I9-1wR" secondAttribute="leading" id="akh-Pj-TzR"/>
                                             <constraint firstItem="of1-mb-YXH" firstAttribute="top" secondItem="waN-I9-1wR" secondAttribute="top" id="vc3-cU-F9U"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imagen" destination="of1-mb-YXH" id="LIJ-g8-kSE"/>
+                                            <outlet property="name" destination="Ki9-Gd-0tL" id="3TM-Sg-bWG"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="eZn-8T-DcJ" id="MYg-R5-wJJ"/>
+                                    <outlet property="delegate" destination="eZn-8T-DcJ" id="o6y-Co-TkC"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
