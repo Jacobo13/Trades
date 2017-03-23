@@ -698,16 +698,17 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="dzF-yH-Rgd" id="pRD-qq-WCs"/>
+                        <segue destination="Iqm-aE-db1" kind="show" identifier="llevame" id="mid-qR-PMY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kl4-sr-Iyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1616.8" y="848.72563718140941"/>
         </scene>
-        <!--View Controller-->
+        <!--Product Page-->
         <scene sceneID="UNa-EQ-Abq">
             <objects>
-                <viewController storyboardIdentifier="ProductPage" id="Iqm-aE-db1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductPage" id="Iqm-aE-db1" customClass="ProductPage" customModule="Trades" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hiP-A8-1rR"/>
                         <viewControllerLayoutGuide type="bottom" id="OrS-XH-DIp"/>
