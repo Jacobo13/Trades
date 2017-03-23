@@ -31,7 +31,7 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+      
     func post() {
         //declaracion de variable que guarda id unica del usuario
         let userID = FIRAuth.auth()?.currentUser?.uid

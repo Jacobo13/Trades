@@ -66,6 +66,11 @@ class ProductPage : UIViewController {
         obscuro.isHidden = true
     }
     @IBAction func proponerTrueque(_ sender: Any) {
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! Propuesta
+        vc.userID = self.infoUsuario[0]["UserID"] as! String
     }
     
 }

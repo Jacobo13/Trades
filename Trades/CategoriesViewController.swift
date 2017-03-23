@@ -28,7 +28,7 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     var objetos : [NSDictionary] = []
     
     var categoria : String!
-    let categorias = ["Arte", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnologia", "Arte", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnologia"]
+    let categorias = ["Arte", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnologia", "Otros"]
     
     
     
