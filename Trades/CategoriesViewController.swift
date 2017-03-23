@@ -25,6 +25,7 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
     var currentLocation : CLLocationCoordinate2D!
+    var objetos : [NSDictionary] = []
     
     var categoria : String!
     let categorias = ["Arte", "Cocina", "Deportes", "Ejercicio", "Hogar", "Juegos", "Oficina", "Ropa", "Tecnología"]
@@ -59,19 +60,6 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        let conditionRef = FIRDatabase.database().reference().child("Categorias").child("Arte").child("35A31B2B-A4C9-41B7-BC7B-FBC3EBD872DE").child("Description")
-//        conditionRef.observe(.value) { (snap: FIRDataSnapshot) in
-//            print((snap.value as AnyObject).description)
-//        }
-        
-        
-        let conditionRef = FIRDatabase.database().reference().child("Categorias").child("\(categoria)").child("35A31B2B-A4C9-41B7-BC7B-FBC3EBD872DE").child("Description")
-        conditionRef.observe(.value) { (snap: FIRDataSnapshot) in
-            print((snap.value as AnyObject).description)
-        }
-        
-        
-        /*var objetos : [NSDictionary] = []
         let databaseRef = FIRDatabase.database().reference()
         databaseRef.child("Categorias/\(categoria!)").observeSingleEvent(of: .value, with: { (snapshot) in
             print("\(snapshot.childrenCount)")
@@ -87,53 +75,23 @@ class CategoriesViewController : UIViewController, CLLocationManagerDelegate {
                                "Image"       : value?["Image"]          as AnyObject,
                                "Latitude"    : value?["Latitude"]       as AnyObject,
                                "Longitude"   : value?["Longitude"]      as AnyObject]
-                    objetos.append(dic as NSDictionary)
+                    self.objetos.append(dic as NSDictionary)
+                    print(self.objetos)
                     print(value?["Description"] as! String)
                 }
             }
-        print(objetos)
+        print(self.objetos)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showPoints"), object: self, userInfo: ["objects" : self.objetos])
+        
         })
-        
-            /*let value = snapshot.value as? NSDictionary
-            print((value?.))
-            for x in value! {
-                print(value![x])
-            }
-            if value?["Longitude"] != nil {
-                print((value?["Longitude"])!)
-                let distance = self.returnDistance(from: self.currentLocation, toLatitude: value!["Latitude"] as! Double, toLongitude: value!["Longitude"] as! Double)
-                 
-                if distance <= 50000 {
-                    //objetos.append(value!)
-                    print(objetos)
-                }
-                print("\(distance) metros")
-            }
-            print("a")*/
-            /*let distance = self.returnDistance(from: self.currentLocation, toLatitude: 19.4068514, toLongitude: -99.2795076)
-            
-            if distance <= 50000 {
-                //objetos.append(value!)
-                print(objetos)
-            }*/
-            
-            
-            let distance = self.returnDistance(from: self.currentLocation, toLatitude: 19.4068514, toLongitude: -99.2795076)
-            
-            if distance <= 50000 {
-                //objetos.append(value!)
-                print(objetos)
-            }
-            
-            print("\(distance) metros")
-        })*/
-        
+ 
         
         
         
         let vc = segue.destination as! NewsFeedViewController
         vc.locationManager = self.locationManager
         vc.categoria = self.categoria
+        vc.objetos = self.objetos
     }
     
     

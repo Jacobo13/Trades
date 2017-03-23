@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9629F02FD906807EA6621336 /* Pods_Trades.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DD52461862414AA114B99A /* Pods_Trades.framework */; };
+		A003359F1E836CE300CA0B07 /* NewsFeedViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003359E1E836CE200CA0B07 /* NewsFeedViewControllerCell.swift */; };
 		A067A5B71E777F68006059A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067A5B61E777F68006059A4 /* AppDelegate.swift */; };
 		A067A5BC1E777F68006059A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A067A5BA1E777F68006059A4 /* Main.storyboard */; };
 		A067A5BF1E777F68006059A4 /* Trades.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A067A5BD1E777F68006059A4 /* Trades.xcdatamodeld */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		57E7C238E23CE4CA065B0582 /* Pods-TradesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradesTests/Pods-TradesTests.release.xcconfig"; sourceTree = "<group>"; };
 		94420F2EFFF8FC2FFD1E85ED /* Pods_TradesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A003359E1E836CE200CA0B07 /* NewsFeedViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewControllerCell.swift; sourceTree = "<group>"; };
 		A067A5B31E777F68006059A4 /* Trades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067A5B61E777F68006059A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A067A5BB1E777F68006059A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				EFA1AACD1E80A0F900982BFB /* CategoriesViewController.swift */,
 				EFA1AACF1E80ABED00982BFB /* CategoriesCollectionViewCell.swift */,
 				EFA1AAD11E80AF8500982BFB /* NewsFeedViewController.swift */,
+				A003359E1E836CE200CA0B07 /* NewsFeedViewControllerCell.swift */,
 				EFC8A8561E7BC57000247FA2 /* Tutorial */,
 			);
 			name = ViewControllers;
@@ -553,6 +556,7 @@
 				A067A5BF1E777F68006059A4 /* Trades.xcdatamodeld in Sources */,
 				EFC8A8551E7BC55D00247FA2 /* (null) in Sources */,
 				EFA1AACC1E80403800982BFB /* LocationCategories.swift in Sources */,
+				A003359F1E836CE300CA0B07 /* NewsFeedViewControllerCell.swift in Sources */,
 				A067A5EC1E78E158006059A4 /* Extensions.swift in Sources */,
 				EFA1AACE1E80A0F900982BFB /* CategoriesViewController.swift in Sources */,
 			);
