@@ -43,15 +43,12 @@ class Propuesta : UIViewController {
         for categoria in categorias {
             databaseRef.child("Categorias/\(categoria)").observeSingleEvent(of: .value, with: { (snapshot) in
                 
-                print("\(snapshot.childrenCount)")
+                
                 for producto in snapshot.children.allObjects as! [FIRDataSnapshot] {
                     let key = producto.key
                     let value1 = producto.value as? NSDictionary
                     
-                    print(value1!["UserID"] as! String)
-                    print(self.traderUserID)
                     if value1!["UserID"] as! String == self.traderUserID {
-                        print("Aweeeeeeboooo")
                         self.traderProducts.append(value1!)
                         self.traderList.append(key)
                     }
@@ -89,17 +86,15 @@ extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 1 {
-            print(traderProducts.count)
             return traderProducts.count
         } else {
-            print(yourProducts.count)
             return yourProducts.count
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PropuestaCell
-        print(collectionView.tag)
+        
         if collectionView.tag == 0 {
             cell.name.text = yourProducts[indexPath.row]["Name"] as? String
             let url = URL(string: "\((yourProducts[indexPath.row]["Image"])!)" )
