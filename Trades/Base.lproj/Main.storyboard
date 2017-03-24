@@ -385,13 +385,27 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DPL-D4-NBC">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="DPL-D4-NBC" customClass="ProfileCell" customModule="Trades" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IR6-gg-7uP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="IR6-gg-7uP" firstAttribute="top" secondItem="DPL-D4-NBC" secondAttribute="top" id="QNe-Na-CWA"/>
+                                            <constraint firstAttribute="trailing" secondItem="IR6-gg-7uP" secondAttribute="trailing" id="jnw-UT-bUI"/>
+                                            <constraint firstAttribute="bottom" secondItem="IR6-gg-7uP" secondAttribute="bottom" id="lcD-oa-19l"/>
+                                            <constraint firstItem="IR6-gg-7uP" firstAttribute="leading" secondItem="DPL-D4-NBC" secondAttribute="leading" id="yFQ-gc-rgw"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imagen" destination="IR6-gg-7uP" id="wX5-PY-05S"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

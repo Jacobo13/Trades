@@ -110,6 +110,8 @@ extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
         self.view.isUserInteractionEnabled = true
         obscuro.isHidden = true
         
+        
+        
         return cell
     }
     
