@@ -10,6 +10,12 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var nombreLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var infoUsuario : [NSDictionary] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +34,38 @@ class ProfileViewController: UIViewController {
     }
     
     
+    func createThings() {
+        let item = infoUsuario[0]
+        let url = URL(string: "\(item["Image"]!)" )
+        let data = NSData(contentsOf: url!)
+        image.image = UIImage(data: data as! Data)
+        descripcion.text = item["Description"] as? String
+        name.text = item["Name"] as? String
+        
+        
+        let databaseRef = FIRDatabase.database().reference()
+        databaseRef.child("Users").observeSingleEvent(of: .value, with: { (snapshot) in
+            print("\(snapshot.childrenCount)")
+            
+            for rest in snapshot.children.allObjects as! [FIRDataSnapshot] {
+                let item = self.infoUsuario[0]
+                if rest.key == item["UserID"] as! String {
+                    let value = rest.value as? NSDictionary
+                    self.usuario.text = value!["Name"] as? String
+                }
+                
+                //if rest =
+                
+                //let distance = self.returnDistance(from: self.currentLocation, toLatitude: value?["Latitude"] as! Double, toLongitude: value?["Longitude"] as! Double)
+            }
+        })
+        loading.stopAnimating()
+        self.view.isUserInteractionEnabled = true
+        obscuro.isHidden = true
+    }
+
+    
+    
     
 
     /*
@@ -40,4 +78,11 @@ class ProfileViewController: UIViewController {
     }
     */
 
+}
+
+
+extension ProfileViewController : UICollectionViewDataSource, UICollectionViewDelegate {
+
+    
+    
 }
