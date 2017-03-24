@@ -347,7 +347,7 @@
 				TargetAttributes = {
 					A067A5B21E777F68006059A4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5J6PQAXLV7;
+						DevelopmentTeam = 6PABS2AYF8;
 						ProvisioningStyle = Automatic;
 					};
 					A067A5C91E777F68006059A4 = {
@@ -729,9 +729,9 @@
 			baseConfigurationReference = AFD265B1BC428788AAADDDD8 /* Pods-Trades.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5J6PQAXLV7;
+				DEVELOPMENT_TEAM = 6PABS2AYF8;
 				INFOPLIST_FILE = Trades/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.darwich.Trades;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -744,9 +744,9 @@
 			baseConfigurationReference = FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5J6PQAXLV7;
+				DEVELOPMENT_TEAM = 6PABS2AYF8;
 				INFOPLIST_FILE = Trades/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.darwich.Trades;
 				PRODUCT_NAME = "$(TARGET_NAME)";

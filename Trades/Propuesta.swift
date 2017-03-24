@@ -51,30 +51,26 @@ class Propuesta : UIViewController {
                     if value1!["UserID"] as! String == self.traderUserID {
                         self.traderProducts.append(value1!)
                         self.traderList.append(key)
+                        self.yourCollectionView.reloadData()
+                        self.TradersCollectionView.reloadData()
                     }
                     if value1!["UserID"] as! String == self.userID! {
                         self.yourProducts.append(value1!)
                         self.yourList.append(key)
-                        
-    
-                        
-                        
+                        self.yourCollectionView.reloadData()
+                        self.TradersCollectionView.reloadData()
                     }
-                    
             
                 }
                 //aca
             })
-            if categoria == "Otros" {
-               TradersCollectionView.reloadData()
-                yourCollectionView.reloadData()
-            }
+            
         }
-
     }
     
     @IBAction func sendTrade(_ sender: Any) {
-        
+        self.yourCollectionView.reloadData()
+        self.TradersCollectionView.reloadData()
     }
     
     
@@ -113,9 +109,7 @@ extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
         loading.stopAnimating()
         self.view.isUserInteractionEnabled = true
         obscuro.isHidden = true
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showPoint"), object: self, userInfo: ["yourProducts" : yourProducts])
-        
+        print("aaaaaaa")
         return cell
     }
     

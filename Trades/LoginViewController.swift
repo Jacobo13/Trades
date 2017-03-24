@@ -21,8 +21,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(fb.objectos)
         // Do any additional setup after loading the view, typically from a nib.
         
         //esconder error hasta que exista

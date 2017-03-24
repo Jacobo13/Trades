@@ -16,18 +16,23 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     let userID = FIRAuth.auth()?.currentUser?.uid
     var infoUsuario : [NSDictionary] = []
+    let fb = FirebaseService()
+    var productos : [NSDictionary] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(self.getInfo(notification:)), name: NSNotification.Name(rawValue: "showPoint"), object: nil)
         
+        productos = fb.yourProducts
+        if productos == [] {
+            print("latuya")
+        }
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        self.nombreLabel.text = fb.yourName
+        self.mailLabel.text = FIRAuth.auth()?.currentUser?.email
         // Do any additional setup after loading the view.
-    }
-    
-    
-    func getInfo (notification : Notification) {
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,30 +45,6 @@ class ProfileViewController: UIViewController {
         UserService.endSession()
         _ = self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    
-    func createThings() {
-        let item = infoUsuario[0]
-        
-        
-        //image.image = UIImage(data: data as! Data)
-        nombreLabel.text = item["Name"] as? String
-        
-        let databaseRef = FIRDatabase.database().reference()
-        databaseRef.child("Users/\(userID)").observeSingleEvent(of: .value, with: { (snapshot) in
-            print("\(snapshot.childrenCount)")
-            let value = snapshot.value as! NSDictionary
-            self.nombreLabel.text = value["Name"] as? String
-            self.mailLabel.text = value["Email"] as? String
-            self.infoUsuario.append(value)
-        })
-        
-        
-    }
-
-    
-    
-    
 
     /*
     // MARK: - Navigation
@@ -81,16 +62,15 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let value = infoUsuario[0]["Products"] as! NSDictionary
-        return value.count
+        return productos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ProfileCell
         
-        let url = URL(string: "\(item["Image"]!)" )
+        let url = URL(string: "\(productos[indexPath.row]["Image"]!)" )
         let data = NSData(contentsOf: url!)
-        cell.imagen.image = 
+        cell.imagen.image = UIImage(data: data as! Data)
             
         return cell
     }
