@@ -30,6 +30,7 @@
 		EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB3D1E78694A001772E9 /* CustomControls.swift */; };
 		EF1AAB441E78CF76001772E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */; };
 		EF7BE25B1E78EB3B00E9CE5C /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */; };
+		EF975A8E1E85CE5C00719313 /* PendientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF975A8D1E85CE5C00719313 /* PendientesViewController.swift */; };
 		EF97E3DF1E7BDE7000EB4833 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97E3DD1E7BDE7000EB4833 /* TutorialPageViewController.swift */; };
 		EF97E3E01E7BDE7000EB4833 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97E3DE1E7BDE7000EB4833 /* TutorialViewController.swift */; };
 		EFA1AACC1E80403800982BFB /* LocationCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1AACB1E80403800982BFB /* LocationCategories.swift */; };
@@ -93,6 +94,7 @@
 		EF1AAB3D1E78694A001772E9 /* CustomControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
 		EF1AAB431E78CF76001772E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF7BE25A1E78EB3B00E9CE5C /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		EF975A8D1E85CE5C00719313 /* PendientesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendientesViewController.swift; sourceTree = "<group>"; };
 		EF97E3DD1E7BDE7000EB4833 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		EF97E3DE1E7BDE7000EB4833 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		EFA1AACB1E80403800982BFB /* LocationCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCategories.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				A00335A01E837ED000CA0B07 /* ProductPage.swift */,
 				A07AF3911E841D7B001B6523 /* Propuesta.swift */,
 				EFA4EE031E84292F004A01DB /* PropuestaCell.swift */,
+				EF975A8D1E85CE5C00719313 /* PendientesViewController.swift */,
 				EFC8A8561E7BC57000247FA2 /* Tutorial */,
 			);
 			name = ViewControllers;
@@ -347,7 +350,7 @@
 				TargetAttributes = {
 					A067A5B21E777F68006059A4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5J6PQAXLV7;
+						DevelopmentTeam = 6PABS2AYF8;
 						ProvisioningStyle = Automatic;
 					};
 					A067A5C91E777F68006059A4 = {
@@ -565,6 +568,7 @@
 				EF97E3DF1E7BDE7000EB4833 /* TutorialPageViewController.swift in Sources */,
 				EF7BE25B1E78EB3B00E9CE5C /* AddViewController.swift in Sources */,
 				A067A5B71E777F68006059A4 /* AppDelegate.swift in Sources */,
+				EF975A8E1E85CE5C00719313 /* PendientesViewController.swift in Sources */,
 				A07AF3961E84CE1D001B6523 /* FirebaseService.swift in Sources */,
 				EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */,
 				EF97E3E01E7BDE7000EB4833 /* TutorialViewController.swift in Sources */,
@@ -729,7 +733,7 @@
 			baseConfigurationReference = AFD265B1BC428788AAADDDD8 /* Pods-Trades.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5J6PQAXLV7;
+				DEVELOPMENT_TEAM = 6PABS2AYF8;
 				INFOPLIST_FILE = Trades/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -744,7 +748,7 @@
 			baseConfigurationReference = FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5J6PQAXLV7;
+				DEVELOPMENT_TEAM = 6PABS2AYF8;
 				INFOPLIST_FILE = Trades/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
