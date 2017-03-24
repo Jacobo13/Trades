@@ -22,6 +22,7 @@
 		A067A5EE1E798B05006059A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067A5ED1E798B05006059A4 /* ProfileViewController.swift */; };
 		A07AF3921E841D7B001B6523 /* Propuesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07AF3911E841D7B001B6523 /* Propuesta.swift */; };
 		A07AF3941E84C381001B6523 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07AF3931E84C381001B6523 /* ProfileCell.swift */; };
+		A07AF3961E84CE1D001B6523 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07AF3951E84CE1D001B6523 /* FirebaseService.swift */; };
 		C5BAC6762307356C50FD0502 /* Pods_TradesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94420F2EFFF8FC2FFD1E85ED /* Pods_TradesUITests.framework */; };
 		CF2EC02151CB9C2502D95FB7 /* Pods_TradesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57828890322DF0E8773567B /* Pods_TradesTests.framework */; };
 		EF1AAB3A1E7866AE001772E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB391E7866AE001772E9 /* LoginViewController.swift */; };
@@ -81,6 +82,7 @@
 		A067A5ED1E798B05006059A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A07AF3911E841D7B001B6523 /* Propuesta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Propuesta.swift; sourceTree = "<group>"; };
 		A07AF3931E84C381001B6523 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		A07AF3951E84CE1D001B6523 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		A0B4E4A6A17B76A31F479A38 /* Pods-TradesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradesTests/Pods-TradesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9DD52461862414AA114B99A /* Pods_Trades.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trades.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD265B1BC428788AAADDDD8 /* Pods-Trades.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trades.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trades/Pods-Trades.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				A067A5E81E78DFB8006059A4 /* UserServices.swift */,
 				EFA1AACB1E80403800982BFB /* LocationCategories.swift */,
 				EFA1AAD31E80BAAC00982BFB /* LocationAdd.swift */,
+				A07AF3951E84CE1D001B6523 /* FirebaseService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				EF97E3DF1E7BDE7000EB4833 /* TutorialPageViewController.swift in Sources */,
 				EF7BE25B1E78EB3B00E9CE5C /* AddViewController.swift in Sources */,
 				A067A5B71E777F68006059A4 /* AppDelegate.swift in Sources */,
+				A07AF3961E84CE1D001B6523 /* FirebaseService.swift in Sources */,
 				EF1AAB3E1E78694A001772E9 /* CustomControls.swift in Sources */,
 				EF97E3E01E7BDE7000EB4833 /* TutorialViewController.swift in Sources */,
 				A00335A11E837ED000CA0B07 /* ProductPage.swift in Sources */,

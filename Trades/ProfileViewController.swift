@@ -58,10 +58,7 @@ class ProfileViewController: UIViewController {
             self.infoUsuario.append(value)
         })
         
-        databaseRef.child(cat)
-        /*loading.stopAnimating()
-        self.view.isUserInteractionEnabled = true
-        obscuro.isHidden = true*/
+        
     }
 
     
@@ -93,7 +90,7 @@ extension ProfileViewController : UICollectionViewDataSource, UICollectionViewDe
         
         let url = URL(string: "\(item["Image"]!)" )
         let data = NSData(contentsOf: url!)
-        cell.imagen.image =
+        cell.imagen.image = 
             
         return cell
     }
