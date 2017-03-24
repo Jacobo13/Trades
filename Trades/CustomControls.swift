@@ -16,3 +16,11 @@ func animate() {
     animation.keyTimes = [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.65, 0.55, 0.45, 0.35, 0.25, 0]
 
 }
+
+func customAlert(view : UIViewController, message : String, action : [UIAlertAction]) {
+    let alert = UIAlertController(title: "Exito", message: message, preferredStyle: .alert)
+    for item in action {
+        alert.addAction(item)
+    }
+    view.present(alert, animated: true, completion: nil)
+}

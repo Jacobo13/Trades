@@ -130,9 +130,22 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         let post2 = ID
         let databaseRef2 = FIRDatabase.database().reference(withPath: "Users/\(userID!)/Products")
         databaseRef2.child(post2).setValue(post2)
+        
+        
         loading.stopAnimating()
         self.view.isUserInteractionEnabled = true
         obscuro.isHidden = true
+        
+        if obscuro.isHidden == true {
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                print("hice algo con la acción")
+            })
+            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+            let acciones : [UIAlertAction] = [okAction, cancelAction]
+            customAlert(view: self, message: "Tu producto fue creado correctamente", action: acciones)
+            
+        }
         
     }
 }
