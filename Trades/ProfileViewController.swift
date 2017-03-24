@@ -20,7 +20,14 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NotificationCenter.default.addObserver(self, selector: #selector(self.getInfo(notification:)), name: NSNotification.Name(rawValue: "showPoint"), object: nil)
+        
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func getInfo (notification : Notification) {
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,7 +95,6 @@ extension ProfileViewController : UICollectionViewDataSource, UICollectionViewDe
         let data = NSData(contentsOf: url!)
         cell.imagen.image =
             
-        
         return cell
     }
     

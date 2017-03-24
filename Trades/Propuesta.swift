@@ -55,6 +55,10 @@ class Propuesta : UIViewController {
                     if value1!["UserID"] as! String == self.userID! {
                         self.yourProducts.append(value1!)
                         self.yourList.append(key)
+                        
+    
+                        
+                        
                     }
                     
             
@@ -110,7 +114,7 @@ extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
         self.view.isUserInteractionEnabled = true
         obscuro.isHidden = true
         
-        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showPoint"), object: self, userInfo: ["yourProducts" : yourProducts])
         
         return cell
     }
