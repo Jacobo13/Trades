@@ -24,8 +24,14 @@ class Propuesta : UIViewController {
     @IBOutlet weak var TradersCollectionView: UICollectionView!
     @IBOutlet weak var yourCollectionView: UICollectionView!
     
+    @IBOutlet weak var obscuro: UIImageView!
+
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loading.startAnimating()
+        self.view.isUserInteractionEnabled = false
+        obscuro.isHidden = false
         TradersCollectionView.delegate = self
         TradersCollectionView.dataSource = self
         yourCollectionView.delegate = self
@@ -43,7 +49,9 @@ class Propuesta : UIViewController {
                     let value1 = producto.value as? NSDictionary
                     
                     print(value1!["UserID"] as! String)
+                    print(self.traderUserID)
                     if value1!["UserID"] as! String == self.traderUserID {
+                        print("Aweeeeeeboooo")
                         self.traderProducts.append(value1!)
                         self.traderList.append(key)
                     }
@@ -54,11 +62,18 @@ class Propuesta : UIViewController {
                     
             
                 }
+                //aca
             })
+            if categoria == "Otros" {
+               TradersCollectionView.reloadData()
+                yourCollectionView.reloadData()
+            }
         }
+
     }
     
     @IBAction func sendTrade(_ sender: Any) {
+        
     }
     
     
@@ -74,8 +89,10 @@ extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 1 {
+            print(traderProducts.count)
             return traderProducts.count
         } else {
+            print(yourProducts.count)
             return yourProducts.count
         }
     }
@@ -85,16 +102,18 @@ extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
         print(collectionView.tag)
         if collectionView.tag == 0 {
             cell.name.text = yourProducts[indexPath.row]["Name"] as? String
-            let url = URL(string: "\(yourProducts[indexPath.row]["Image"])" )
+            let url = URL(string: "\((yourProducts[indexPath.row]["Image"])!)" )
             let data = NSData(contentsOf: url!)
             cell.imagen.image = UIImage(data: data as! Data)
         } else {
             cell.name.text = traderProducts[indexPath.row]["Name"] as? String
-            let url = URL(string: "\(traderProducts[indexPath.row]["Image"])" )
+            let url = URL(string: "\((traderProducts[indexPath.row]["Image"])!)" )
             let data = NSData(contentsOf: url!)
             cell.imagen.image = UIImage(data: data as! Data)
         }
-        
+        loading.stopAnimating()
+        self.view.isUserInteractionEnabled = true
+        obscuro.isHidden = true
         
         return cell
     }
@@ -106,7 +125,7 @@ extension Propuesta : UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PropuestaCell
         cell.backgroundColor = UIColor.green
         //Hacemos la llamada al servicio segun la elección del usuario
-        performSegue(withIdentifier: "menuToMap", sender: nil)
+        //performSegue(withIdentifier: "menuToMap", sender: nil)
     }
     
 }
