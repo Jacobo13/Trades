@@ -71,6 +71,13 @@ class Propuesta : UIViewController {
     @IBAction func sendTrade(_ sender: Any) {
         self.yourCollectionView.reloadData()
         self.TradersCollectionView.reloadData()
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            print("hice algo con la acción")
+        })
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        let acciones : [UIAlertAction] = [okAction, cancelAction]
+        customAlert(view: self, message: "Trueqeue mandado", action: acciones)
     }
     
     

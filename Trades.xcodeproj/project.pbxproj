@@ -23,6 +23,7 @@
 		A07AF3921E841D7B001B6523 /* Propuesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07AF3911E841D7B001B6523 /* Propuesta.swift */; };
 		A07AF3941E84C381001B6523 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07AF3931E84C381001B6523 /* ProfileCell.swift */; };
 		A07AF3961E84CE1D001B6523 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07AF3951E84CE1D001B6523 /* FirebaseService.swift */; };
+		A07AF3981E85D7AB001B6523 /* FakeingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07AF3971E85D7AB001B6523 /* FakeingHelper.swift */; };
 		C5BAC6762307356C50FD0502 /* Pods_TradesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94420F2EFFF8FC2FFD1E85ED /* Pods_TradesUITests.framework */; };
 		CF2EC02151CB9C2502D95FB7 /* Pods_TradesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57828890322DF0E8773567B /* Pods_TradesTests.framework */; };
 		EF1AAB3A1E7866AE001772E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AAB391E7866AE001772E9 /* LoginViewController.swift */; };
@@ -84,6 +85,7 @@
 		A07AF3911E841D7B001B6523 /* Propuesta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Propuesta.swift; sourceTree = "<group>"; };
 		A07AF3931E84C381001B6523 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		A07AF3951E84CE1D001B6523 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		A07AF3971E85D7AB001B6523 /* FakeingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeingHelper.swift; sourceTree = "<group>"; };
 		A0B4E4A6A17B76A31F479A38 /* Pods-TradesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradesTests/Pods-TradesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9DD52461862414AA114B99A /* Pods_Trades.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trades.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD265B1BC428788AAADDDD8 /* Pods-Trades.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trades.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trades/Pods-Trades.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				A067A5EB1E78E158006059A4 /* Extensions.swift */,
+				A07AF3971E85D7AB001B6523 /* FakeingHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -350,7 +353,7 @@
 				TargetAttributes = {
 					A067A5B21E777F68006059A4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6PABS2AYF8;
+						DevelopmentTeam = 5J6PQAXLV7;
 						ProvisioningStyle = Automatic;
 					};
 					A067A5C91E777F68006059A4 = {
@@ -575,6 +578,7 @@
 				A00335A11E837ED000CA0B07 /* ProductPage.swift in Sources */,
 				A067A5E91E78DFB8006059A4 /* UserServices.swift in Sources */,
 				EFC8A8541E7BC55D00247FA2 /* (null) in Sources */,
+				A07AF3981E85D7AB001B6523 /* FakeingHelper.swift in Sources */,
 				A067A5EE1E798B05006059A4 /* ProfileViewController.swift in Sources */,
 				A067A5BF1E777F68006059A4 /* Trades.xcdatamodeld in Sources */,
 				EFC8A8551E7BC55D00247FA2 /* (null) in Sources */,
@@ -733,7 +737,7 @@
 			baseConfigurationReference = AFD265B1BC428788AAADDDD8 /* Pods-Trades.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6PABS2AYF8;
+				DEVELOPMENT_TEAM = 5J6PQAXLV7;
 				INFOPLIST_FILE = Trades/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -748,7 +752,7 @@
 			baseConfigurationReference = FC94AFF57CFCF68C9796525B /* Pods-Trades.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6PABS2AYF8;
+				DEVELOPMENT_TEAM = 5J6PQAXLV7;
 				INFOPLIST_FILE = Trades/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
